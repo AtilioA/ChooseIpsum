@@ -1,0 +1,129 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2020-06-11T13:49:39.833Z",
+  "__export_source": "insomnia.desktop.app:v7.1.1",
+  "resources": [
+    {
+      "_id": "req_f10aae82564a488b9059cab105f13b04",
+      "authentication": {},
+      "body": {},
+      "created": 1591883248659,
+      "description": "",
+      "headers": [],
+      "isPrivate": false,
+      "metaSortKey": -1591883248659,
+      "method": "GET",
+      "modified": 1591883291437,
+      "name": "Blank GET request",
+      "parameters": [],
+      "parentId": "wrk_e935f447579a45cb8e602b408cd10f62",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ baseURL  }}/api/",
+      "_type": "request"
+    },
+    {
+      "_id": "wrk_e935f447579a45cb8e602b408cd10f62",
+      "created": 1591883198562,
+      "description": "",
+      "modified": 1591883198562,
+      "name": "ChooseIpsum",
+      "parentId": null,
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_71235534d2b6407686d41b9ea45b1a88",
+      "authentication": {},
+      "body": {},
+      "created": 1591883295767,
+      "description": "",
+      "headers": [],
+      "isPrivate": false,
+      "metaSortKey": -1590352605557.5,
+      "method": "GET",
+      "modified": 1591883335691,
+      "name": "Full GET request",
+      "parameters": [
+        {
+          "description": "",
+          "id": "pair_10af790fd8474167b8fb05520a7247d0",
+          "name": "startWithChooseIpsum",
+          "value": "false"
+        },
+        {
+          "description": "",
+          "id": "pair_15aa312dba2a4aca89d0eef551960c58",
+          "name": "sentences=12",
+          "value": ""
+        },
+        {
+          "description": "",
+          "id": "pair_654f222244e545d38357d471d1ca8acf",
+          "name": "swear",
+          "value": "false"
+        },
+        {
+          "description": "",
+          "id": "pair_3143f468081c4a13954d782d204610c1",
+          "name": "political",
+          "value": "true"
+        },
+        {
+          "description": "",
+          "id": "pair_07a0b6edcdcd42708679e484f1b08f3b",
+          "name": "format",
+          "value": "html"
+        }
+      ],
+      "parentId": "wrk_e935f447579a45cb8e602b408cd10f62",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ baseURL  }}/api/",
+      "_type": "request"
+    },
+    {
+      "_id": "env_f2f40e0980a88e3dedb9a29b5f6c8cc1bd08089d",
+      "color": null,
+      "created": 1591883198698,
+      "data": {},
+      "dataPropertyOrder": {},
+      "isPrivate": false,
+      "metaSortKey": 1591883198698,
+      "modified": 1591883239946,
+      "name": "Base Environment",
+      "parentId": "wrk_e935f447579a45cb8e602b408cd10f62",
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_f2f40e0980a88e3dedb9a29b5f6c8cc1bd08089d",
+      "cookies": [],
+      "created": 1591883198702,
+      "modified": 1591883198702,
+      "name": "Default Jar",
+      "parentId": "wrk_e935f447579a45cb8e602b408cd10f62",
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "env_56d58fd907f7400c84d05ab1260648c0",
+      "color": "#00ff00",
+      "created": 1591883221185,
+      "data": { "baseURL": "localhost:3333" },
+      "dataPropertyOrder": { "&": ["baseURL"] },
+      "isPrivate": false,
+      "metaSortKey": 1591883221185,
+      "modified": 1591883282616,
+      "name": "Development",
+      "parentId": "env_f2f40e0980a88e3dedb9a29b5f6c8cc1bd08089d",
+      "_type": "environment"
+    }
+  ]
+}
