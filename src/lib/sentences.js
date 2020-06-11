@@ -62,7 +62,7 @@ export const swearSentences = [
 
 export const politicalSentences = [
   'Choose patriarchy, which consumes your very soul. ',
-  "Choose shallow TV series poking at social issues without stepping out of the comfort zone and pretending they're actually not shallow",
+  "Choose shallow TV series poking at social issues without stepping out of the comfort zone and pretending they're actually not shallow. ",
   'Choose the red pill. ',
   'Choose mass shootings. ',
   'Choose Zeitgeist and its addendum. ',
