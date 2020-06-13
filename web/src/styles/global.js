@@ -13,14 +13,19 @@ export default createGlobalStyle`
   }
 
   body {
-    background: #7159c1;
+    background: #ec6917;
     -webkit-font-smoothing: antialiased !important;
+    margin-bottom: 60px;
+  }
+
+  .page-content {
+    flex: 1;
   }
 
   body, input, button {
     color: #222;
-    font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-family: Helvetica, Arial, sans-serif;
   }
 
   button {
