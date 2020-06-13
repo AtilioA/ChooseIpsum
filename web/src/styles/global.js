@@ -9,7 +9,8 @@ export default createGlobalStyle`
 }
 
   html, body, #root {
-    min-height: 100%;
+    ${'' /* min-height: 100%; */}
+    height: 95%;
   }
 
   body {
