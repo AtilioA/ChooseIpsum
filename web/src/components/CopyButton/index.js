@@ -21,7 +21,7 @@ const CopyButton = styled.div`
     text-transform: uppercase;
     transition: background 0.2s;
     width: 100%;
-    /* margin-left: -25px; */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 
     &:hover {
       background: ${darken(0.05, '#26151b')};

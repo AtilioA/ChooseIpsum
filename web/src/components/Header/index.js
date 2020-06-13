@@ -38,7 +38,9 @@ const Header = styled.div`
     border-bottom: 1px solid #aaa;
     position: relative;
     top: 5%;
-    width: 20%;
+    width: 22%;
+    text-align: center;
+    margin-left: -3px;
   }
 
   /* Highlight input field */
@@ -66,7 +68,10 @@ const Header = styled.div`
   }
 
   input[type='radio'] {
-    /* margin-left: -50px; */
+    margin-left: -7px;
+  }
+
+  input[type='radio']:checked {
   }
 
   input[type='radio']:checked + label {
@@ -84,10 +89,11 @@ const Header = styled.div`
     justify-content: center;
 
     background: #26151b;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     color: #cabfad;
     border: 0;
     border-radius: 4px;
-    padding: 12px 20px;
+    padding: 10px 18px;
     font-weight: bold;
     text-transform: uppercase;
     transition: background 0.2s;

@@ -38,19 +38,23 @@ export default class Main extends Component {
       <>
         <Container>
           <Header>
-            {/* "Choose" (Number input) (Radio input) ('Generate' button) */}
+            {/* "Choose" (Number input) (Radio input) (Checkbox input) ('Generate' button) */}
             <div className="text-choose item flex-item-1">
               Choose <input id="number-of-ipsums" type="number"></input>
             </div>
+
             <div className="selector-choose item flex-item-1">
               <input
                 type="radio"
                 id="sentences"
                 name="type"
                 value="sentences"
+                checked
               />
               <label htmlFor="sentences">sentences</label>
+
               <br />
+
               <input
                 type="radio"
                 id="paragraphs"
@@ -59,6 +63,29 @@ export default class Main extends Component {
               />
               <label htmlFor="paragraphs">paragraphs</label>
             </div>
+
+            <div className="button-random item flex-item-1">
+              <input
+                type="checkbox"
+                id="swear"
+                name="type"
+                value="swear"
+              // checked
+              />
+              <label htmlFor="swear">swear</label>
+
+              <br />
+
+              <input
+                type="checkbox"
+                id="political"
+                name="type"
+                value="political"
+              // checked
+              />
+              <label htmlFor="political">political</label>
+            </div>
+
             <div className="button-random item flex-item-1">
               <button>
                 <FaRandom color={'#ccc'} /> Generate
@@ -82,8 +109,8 @@ export default class Main extends Component {
                   mind-numbing spirit-crushing game shows, stuffing fucking junk
                   food into your mouth. Choose rotting away at the end of it
                   all, pissing your last in a miserable home, nothing more than
-                  an embarrassment to the selfish, fucked-up brats you
-                  spawned to replace yourself.
+                  an embarrassment to the selfish, fucked-up brats you spawned
+                  to replace yourself.
                 </p>
                 <div className="poster-footer">
                   <h2>Choose lorem.</h2>

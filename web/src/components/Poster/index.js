@@ -11,7 +11,7 @@ const Poster = styled.div`
   div.poster-frame {
     display: flex;
     flex: 1;
-    border: 8px solid #000;
+    border: 8px solid #26151b;
     height: 100%;
     width: 100%;
     /* padding: 10px; */
