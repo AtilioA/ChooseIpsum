@@ -33,7 +33,8 @@ const Header = styled.div`
   input {
     background-color: transparent;
     color: #26151b;
-    font-size: 20px;
+    font-weight: bold;
+    font-size: 21px;
     border: none;
     border-bottom: 1px solid #aaa;
     position: relative;
@@ -89,19 +90,21 @@ const Header = styled.div`
     justify-content: center;
 
     background: #26151b;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
     color: #cabfad;
     border: 0;
     border-radius: 4px;
     padding: 10px 18px;
     font-weight: bold;
     text-transform: uppercase;
-    transition: background 0.2s;
+    transition: background 0.5s;
     width: 100%;
-    /* margin-left: -25px; */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 500ms;
 
     &:hover {
       background: ${darken(0.05, '#26151b')};
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     }
   }
 `;

@@ -19,12 +19,14 @@ const CopyButton = styled.div`
     padding: 12px 20px;
     font-weight: bold;
     text-transform: uppercase;
-    transition: background 0.2s;
+    transition: background 0.5s;
     width: 100%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 500ms;
 
     &:hover {
       background: ${darken(0.05, '#26151b')};
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     }
   }
 `;
