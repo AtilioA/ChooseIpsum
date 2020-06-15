@@ -26,7 +26,7 @@ export const vanillaSentences = [
   'Choose a playlist. ',
   'Choose yet another lorem ipsum generator. ',
   'Choose a messenger owned by Facebook. ',
-  'Choose games with meaningless choices. ',
+  'Choose videogames with meaningless choices. ',
   'Choose labels. ',
   'Choose gig economy. ',
   'Choose burnout syndrome. ',

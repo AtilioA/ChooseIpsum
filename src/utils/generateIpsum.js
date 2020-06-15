@@ -10,7 +10,7 @@ import {
 export const maxSentences =
   vanillaSentences.length + swearSentences.length + politicalSentences.length;
 
-export const maxParagraphs = 1000;
+export const maxParagraphs = 50;
 
 // Generate lorem ipsum array with n paragraphs made of randomly chosen number of sentences
 export function generateParagraphs(
@@ -20,6 +20,13 @@ export function generateParagraphs(
   startWithChooseLife = true,
   endWithChooseLife = true
 ) {
+  if (nParagraphs > maxParagraphs) {
+    throw new RangeError({
+      text: `generateParagraphs: too many paragraphs requested ${nParagraphs}`,
+      maxParagraphs,
+    });
+  }
+
   var allSentences = vanillaSentences;
   if (swear) {
     allSentences = allSentences.concat(swearSentences);
@@ -60,14 +67,21 @@ export default function generateSentences(
   startWithChooseLife = true,
   endWithChooseLife = true
 ) {
+  var maxSentences = vanillaSentences.length;
+
   var allSentences = vanillaSentences;
   if (swear) {
     allSentences = allSentences.concat(swearSentences);
+    maxSentences += swearSentences.length;
   }
   if (political) {
     allSentences = allSentences.concat(politicalSentences);
+    maxSentences += politicalSentences.length;
   }
 
+  if (nSentences > maxSentences) {
+    throw new RangeError(maxSentences);
+  }
   var randomSentences = getSample(allSentences, nSentences);
 
   var sentences = '';
@@ -79,7 +93,7 @@ export default function generateSentences(
     sentences = 'Choose life. ' + sentences;
   }
   if (endWithChooseLife) {
-    sentences += ' Choose Lorem. Choose Ipsum.';
+    sentences += 'Choose Lorem. Choose Ipsum.';
   }
 
   return sentences;
