@@ -23,6 +23,13 @@ const Footer = styled.div`
 
   small {
     font-size: 15px;
+    float: left;
+  }
+
+  div#footer-last-line span {
+    float: right;
+    font-size: 12px;
+    padding-right: 5px;
   }
 `;
 

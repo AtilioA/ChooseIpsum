@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
-import generateSentences, {
-  generateParagraphs,
-} from '../../../../src/utils/generateIpsum';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import { FaRandom, FaRegClipboard } from 'react-icons/fa';
 
+import generateSentences, {
+  generateParagraphs,
+  maxParagraphs,
+} from '../../../../src/utils/generateIpsum';
 import Container from '../../components/Container/index.js';
 import Footer from '../../components/Footer/index.js';
 import Header from '../../components/Header/index.js';
@@ -96,29 +100,75 @@ to replace yourself.`,
   handleClickGenerate() {
     const { sentences, paragraphs, ipsumType, swear, political } = this.state;
 
-    console.log('oi ' + ipsumType);
-
-    switch (ipsumType) {
-      case 'sentences':
+    try {
+      switch (ipsumType) {
+        case 'sentences':
+          this.setState({
+            chooseIpsum: generateSentences(sentences, swear, political),
+          });
+          break;
+        case 'paragraphs':
+          this.setState({
+            chooseIpsum: generateParagraphs(paragraphs, swear, political),
+          });
+          break;
+        default:
+          toast.error('Unknown type of ', {
+            position: 'bottom-right',
+            autoClose: 4000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+          });
+      }
+    } catch (e) {
+      if (ipsumType === 'sentences' && e instanceof RangeError) {
+        toast.error(
+          `Too many sentences. Maximum number is: ${e.message}; requested: ${sentences}`,
+          {
+            position: 'bottom-right',
+            autoClose: 4000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+          }
+        );
         this.setState({
-          chooseIpsum: generateSentences(sentences, swear, political),
+          sentences: e.message, // max number of sentences depends on whether 'swear' and 'political' options are checked
         });
-        break;
-      case 'paragraphs':
+      } else if (ipsumType === 'paragraphs' && e instanceof RangeError) {
+        toast.error(
+          `Too many paragraphs. Maximum number is: ${maxParagraphs}; requested: ${paragraphs}`,
+          {
+            position: 'bottom-right',
+            autoClose: 4000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+          }
+        );
         this.setState({
-          chooseIpsum: generateParagraphs(paragraphs, swear, political),
+          paragraphs: maxParagraphs,
         });
-        break;
+      }
     }
 
-    console.log(this.state.chooseIpsum);
+    // console.log(this.state.chooseIpsum);
   }
 
   handleNumberInputChange = (changeInputEvent) => {
+    if (changeInputEvent.currentTarget.value < 0) {
+      changeInputEvent.currentTarget.value = -changeInputEvent.currentTarget
+        .value;
+    }
+
     this.setState({
-      sentences: changeInputEvent.currentTarget.value,
+      [this.state.ipsumType]: changeInputEvent.currentTarget.value,
     });
-    console.log(this.state.sentences);
+    // console.log(this.state.sentences);
   };
 
   handleCheckboxChange(toggleCheckboxEvent) {
@@ -133,17 +183,20 @@ to replace yourself.`,
   }
 
   handleRadioChange(changeRadioInputEvent) {
-    console.log(changeRadioInputEvent.currentTarget.value);
     this.setState({
       ipsumType: changeRadioInputEvent.currentTarget.value,
     });
     console.log(this.state.ipsumType);
   }
 
-  copyToClipboard = (e) => { };
+  handleOnKeyDownHandler = (e) => {
+    if (e.keyCode === 13) {
+      this.handleClickGenerate();
+    }
+  };
 
   render() {
-    const { chooseIpsum, sentences, swear, political } = this.state;
+    const { chooseIpsum, swear, political } = this.state;
 
     return (
       <>
@@ -153,8 +206,9 @@ to replace yourself.`,
               Choose{' '}
               <input
                 type="number"
-                defaultValue={sentences}
+                value={this.state[this.state.ipsumType]}
                 onChange={this.handleNumberInputChange}
+                onKeyDown={this.handleOnKeyDownHandler}
               ></input>
             </div>
 
@@ -232,10 +286,13 @@ to replace yourself.`,
           </Poster>
 
           <CopyButton>
-            <button onClick={() => this.copyToClipboard()}>
-              <FaRegClipboard color={'#ccc'} /> Choose
-            </button>
+            <CopyToClipboard text={chooseIpsum}>
+              <button>
+                <FaRegClipboard color={'#ccc'} /> Choose
+              </button>
+            </CopyToClipboard>
           </CopyButton>
+          <ToastContainer />
         </Container>
 
         <div className="page-container">
@@ -245,10 +302,17 @@ to replace yourself.`,
               <a href="https://www.github. com/AtilioA/ChooseIpsum">AtilioA</a>.
             </b>
             <br />
-            <small>
-              This work has been inspired by Trainspotting quotes written by
-              Irvine Welsh.
-            </small>
+            <div id="footer-last-line">
+              <small>
+                This work has been inspired by Trainspotting quotes written by
+                Irvine Welsh.
+              </small>
+              <span>
+                <a href="https://www.github. com/AtilioA/ChooseIpsum/README.md#API">
+                  API
+                </a>
+              </span>
+            </div>
           </Footer>
         </div>
       </>
