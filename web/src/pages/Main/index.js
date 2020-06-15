@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, Slide, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import { FaRandom, FaRegClipboard } from 'react-icons/fa';
@@ -97,6 +97,18 @@ to replace yourself.`,
     }
   }
 
+  sendCopyToClipboardSuccess() {
+    toast.success('Copied to clipboard!', {
+      position: 'bottom-right',
+      autoClose: 2500,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: false,
+      progress: undefined,
+    });
+  }
+
   handleClickGenerate() {
     const { sentences, paragraphs, ipsumType, swear, political } = this.state;
 
@@ -113,9 +125,9 @@ to replace yourself.`,
           });
           break;
         default:
-          toast.error('Unknown type of ', {
+          toast.error('Unknown type of ipsum.', {
             position: 'bottom-right',
-            autoClose: 4000,
+            autoClose: 5000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
@@ -125,10 +137,10 @@ to replace yourself.`,
     } catch (e) {
       if (ipsumType === 'sentences' && e instanceof RangeError) {
         toast.error(
-          `Too many sentences. Maximum number is: ${e.message}; requested: ${sentences}`,
+          `Too many sentences. Maximum number is ${e.message}; requested: ${sentences}`,
           {
             position: 'bottom-right',
-            autoClose: 4000,
+            autoClose: 5000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
@@ -140,10 +152,10 @@ to replace yourself.`,
         });
       } else if (ipsumType === 'paragraphs' && e instanceof RangeError) {
         toast.error(
-          `Too many paragraphs. Maximum number is: ${maxParagraphs}; requested: ${paragraphs}`,
+          `Too many paragraphs. Maximum number is ${maxParagraphs}; requested: ${paragraphs}`,
           {
             position: 'bottom-right',
-            autoClose: 4000,
+            autoClose: 5000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
@@ -287,12 +299,12 @@ to replace yourself.`,
 
           <CopyButton>
             <CopyToClipboard text={chooseIpsum}>
-              <button>
+              <button onClick={() => this.sendCopyToClipboardSuccess()}>
                 <FaRegClipboard color={'#ccc'} /> Choose
               </button>
             </CopyToClipboard>
           </CopyButton>
-          <ToastContainer />
+          <ToastContainer transition={Slide} />
         </Container>
 
         <div className="page-container">
