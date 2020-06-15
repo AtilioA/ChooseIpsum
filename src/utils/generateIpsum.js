@@ -1,4 +1,3 @@
-import sentences from '../lib/sentences.js';
 import getSample from './getSample';
 import getRandomInt from './getRandomInt';
 
@@ -21,19 +20,19 @@ export function generateParagraphs(
   startWithChooseLife = true,
   endWithChooseLife = true
 ) {
-  sentences = vanillaSentences;
+  var allSentences = vanillaSentences;
   if (swear) {
-    sentences = sentences.concat(swearSentences);
+    allSentences = allSentences.concat(swearSentences);
   }
   if (political) {
-    sentences = sentences.concat(politicalSentences);
+    allSentences = allSentences.concat(politicalSentences);
   }
 
   var randomParagraphs = [];
   var nSentences = 5;
   for (let i = 0; i < nParagraphs; i++) {
     nSentences = getRandomInt(5, 20);
-    var randomSentences = getSample(sentences, nSentences);
+    var randomSentences = getSample(allSentences, nSentences);
     randomParagraphs.push(randomSentences);
   }
 
@@ -41,7 +40,7 @@ export function generateParagraphs(
     randomParagraphs[i] = randomParagraphs[i].join('');
 
     if (startWithChooseLife) {
-      randomParagraphs[i] = 'Choose your life. ' + randomParagraphs[i];
+      randomParagraphs[i] = 'Choose life. ' + randomParagraphs[i];
     }
     if (endWithChooseLife) {
       randomParagraphs[i] = randomParagraphs[i].concat(
@@ -50,7 +49,7 @@ export function generateParagraphs(
     }
   }
 
-  return randomParagraphs; // Remove whitespace after full stop
+  return randomParagraphs;
 }
 
 // Generate lorem ipsum string from n randomly chosen sentences
@@ -61,27 +60,27 @@ export default function generateSentences(
   startWithChooseLife = true,
   endWithChooseLife = true
 ) {
-  sentences = vanillaSentences;
+  var allSentences = vanillaSentences;
   if (swear) {
-    sentences = sentences.concat(swearSentences);
+    allSentences = allSentences.concat(swearSentences);
   }
   if (political) {
-    sentences = sentences.concat(politicalSentences);
+    allSentences = allSentences.concat(politicalSentences);
   }
 
-  var randomSentences = getSample(sentences, nSentences);
+  var randomSentences = getSample(allSentences, nSentences);
 
-  var sentence = '';
+  var sentences = '';
   for (var i = 0; i < nSentences; i++) {
-    sentence += randomSentences[i];
+    sentences += randomSentences[i];
   }
 
   if (startWithChooseLife) {
-    sentence = 'Choose your life. ' + sentence;
+    sentences = 'Choose life. ' + sentences;
   }
   if (endWithChooseLife) {
-    sentence += ' Choose Lorem. Choose Ipsum.';
+    sentences += ' Choose Lorem. Choose Ipsum.';
   }
 
-  return sentence;
+  return sentences;
 }
