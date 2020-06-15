@@ -37,7 +37,7 @@ export const vanillaSentences = [
   'Choose mainstream. ',
   'Choose hype. ',
   "Choose cheap ebooks that won't challenge you. ",
-  'Choose YA and chicklit and bland massproduced airport thrillers with sanitised violence. ',
+  'Choose YA and chicklit and bland massproduced airport thrillers with sanitized violence. ',
   'Choose being the victim of the Dunning-Kruger effect. ',
   'Choose financing an used car. ',
   'Choose whatever you want. ',
