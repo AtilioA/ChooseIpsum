@@ -1,41 +1,27 @@
-import generateSentences, {
-  generateParagraphs,
-  maxSentences,
-  maxParagraphs,
-} from '../lib/generateIpsum';
+import generateSentences, { generateParagraphs } from '../lib/generateIpsum';
 
 export default function generateIpsumParam(params) {
-  var { sentences, paragraphs } = params;
-  const { startWithChooseLife, endWithChooseLife, swear, political } = params;
+  var { nSentences, nParagraphs } = params;
+  const { startWithChooseLife, endWithChooseIpsum, swear, political } = params;
 
   var chooseIpsum = undefined;
-  if (!sentences || paragraphs) {
-    paragraphs = paragraphs ? parseInt(paragraphs) : 5;
-    if (paragraphs > maxParagraphs) {
-      return res.status(400).json({
-        error: `Too many paragraphs. Maximum number is ${maxParagraphs}; requested: ${paragraphs}`,
-      });
-    }
+  if (!nSentences || nParagraphs) {
+    nParagraphs = nParagraphs ? parseInt(nParagraphs) : 5;
     chooseIpsum = generateParagraphs(
-      paragraphs,
+      nParagraphs,
       swear,
       political,
       startWithChooseLife,
-      endWithChooseLife
+      endWithChooseIpsum
     );
   } else {
-    sentences = sentences ? parseInt(sentences) : 15;
-    if (sentences > maxSentences) {
-      return res.status(400).json({
-        error: `Too many sentences. Maximum number is ${maxSentences}; requested: ${sentences}`,
-      });
-    }
+    nSentences = nSentences ? parseInt(nSentences) : 15;
     chooseIpsum = generateSentences(
-      sentences,
+      nSentences,
       swear,
       political,
       startWithChooseLife,
-      endWithChooseLife
+      endWithChooseIpsum
     );
   }
 

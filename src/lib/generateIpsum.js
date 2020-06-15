@@ -18,7 +18,7 @@ export function generateParagraphs(
   swear = true,
   political = true,
   startWithChooseLife = true,
-  endWithChooseLife = true
+  endWithChooseIpsum = true
 ) {
   if (nParagraphs > maxParagraphs) {
     throw new RangeError({
@@ -49,7 +49,7 @@ export function generateParagraphs(
     if (startWithChooseLife) {
       randomParagraphs[i] = 'Choose life. ' + randomParagraphs[i];
     }
-    if (endWithChooseLife) {
+    if (endWithChooseIpsum) {
       randomParagraphs[i] = randomParagraphs[i].concat(
         'Choose Lorem. Choose Ipsum.'
       );
@@ -65,7 +65,7 @@ export default function generateSentences(
   swear = true,
   political = true,
   startWithChooseLife = true,
-  endWithChooseLife = true
+  endWithChooseIpsum = true
 ) {
   var maxSentences = vanillaSentences.length;
 
@@ -92,7 +92,7 @@ export default function generateSentences(
   if (startWithChooseLife) {
     sentences = 'Choose life. ' + sentences;
   }
-  if (endWithChooseLife) {
+  if (endWithChooseIpsum) {
     sentences += 'Choose Lorem. Choose Ipsum.';
   }
 

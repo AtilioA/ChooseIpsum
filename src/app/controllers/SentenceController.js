@@ -3,24 +3,31 @@ import generateIpsumParam from '../../utils/generateIpsumParam';
 
 class SentenceController {
   async index(req, res) {
-    const parsedParams = parseParams(req);
+    var parsedParams = undefined;
+    try {
+      parsedParams = parseParams(req);
+    } catch (e) {
+      if (e instanceof RangeError) {
+        if (req.query.nParagraphs) {
+          return res.status(400).json({
+            error: `Too many paragraphs. Requested: ${req.query.nParagraphs}`,
+          });
+        }
+        return res.status(400).json({
+          error: `Too many sentences. Requested: ${req.query.nSentences}`,
+        });
+      }
+    }
     const {
       startWithChooseLife,
       swear,
       political,
-      endWithChooseLife,
+      endWithChooseIpsum,
     } = parsedParams;
-    var { sentences, paragraphs, format } = parsedParams;
+    var { nSentences, nParagraphs, format } = parsedParams;
 
     var chooseIpsum = undefined;
-    try {
-      chooseIpsum = generateIpsumParam(parsedParams);
-    } catch (e) {
-      if (e instanceof RangeError) {
-        console.log('pse');
-      }
-    }
-
+    chooseIpsum = generateIpsumParam(parsedParams);
     switch (format) {
       case 'txt':
         format = 'txt';
@@ -40,11 +47,11 @@ class SentenceController {
         format = 'json';
         return res.json({
           startWithChooseLife, // default: true
-          sentences, // default: 15
-          paragraphs, // default: 5; has preference over 'sentences' option
+          nSentences, // default: 15
+          nParagraphs, // default: 5; has preference over 'nSentences' option
           swear, // default: true
           political, // default: true
-          endWithChooseLife, // default: true
+          endWithChooseIpsum, // default: true
           format, // default: json
           chooseIpsum,
         });

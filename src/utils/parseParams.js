@@ -8,8 +8,8 @@ export default function parseParams(req) {
   ); // Only false when set to false; defaults to true
 
 
-  const endWithChooseLife = !(
-    req.query.endWithChooseLife?.toLowerCase() === 'false'
+  const endWithChooseIpsum = !(
+    req.query.endWithChooseIpsum?.toLowerCase() === 'false'
   );
 
   const swear = !(
@@ -20,24 +20,24 @@ export default function parseParams(req) {
     req.query.political?.toLowerCase() === 'false'
   );
 
-  var { sentences, paragraphs } = req.query;
+  var { nSentences, nParagraphs } = req.query;
   var format = req.query.format ? req.query.format : 'json';
 
-  if (paragraphs > maxParagraphs) {
-    throw RangeError(`Too many paragraphs. Maximum number is ${maxParagraphs}; requested: ${paragraphs}`);
+  if (nParagraphs > maxParagraphs) {
+    throw RangeError(`Too many paragraphs. Maximum number is ${maxParagraphs}; requested: ${nParagraphs}`);
   }
 
-  if (sentences > maxSentences) {
-    throw RangeError(`Too many sentences. Maximum number is ${maxSentences}; requested: ${sentences}`);
+  if (nSentences > maxSentences && !nParagraphs) {
+    throw RangeError(`Too many sentences. Maximum number is ${maxSentences}; requested: ${nSentences}`);
   }
 
   return {
     startWithChooseLife,
-    sentences,
-    paragraphs,
+    nSentences,
+    nParagraphs,
     swear,
     political,
     format,
-    endWithChooseLife
+    endWithChooseIpsum
   }
 }
