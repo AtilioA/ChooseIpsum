@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="http://www.chooseipsum.herokuapp.com">
+  <a href="https://atilioa.github.io/ChooseIpsum">
    <img src=".github/ChooseIpsumIcon.png" width="7%">
    <br/>
   💉 Choose Ipsum
@@ -34,7 +34,7 @@ The application is composed by a RESTful API made with Express and a website run
 <img src=".github/Poster.png" width="50%">
 </div>
 
-# ⚙ API
+# ⚙ API (WIP)
 
 All API access is over HTTPS, and accessed from https://chooseipsum.herokuapp.com/api
 
