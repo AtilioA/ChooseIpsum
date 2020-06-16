@@ -47,8 +47,8 @@ class SentenceController {
         format = 'json';
         return res.json({
           startWithChooseLife, // default: true
-          nSentences, // default: 15
-          nParagraphs, // default: 5; has preference over 'nSentences' option
+          nSentences, // default: 20
+          nParagraphs, // default: 3; has preference over 'nSentences' option
           swear, // default: true
           political, // default: true
           endWithChooseIpsum, // default: true
