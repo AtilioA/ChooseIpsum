@@ -20,7 +20,7 @@
 
 <p align="center">
   <a href="#ℹ-about">About</a> |
-  <a href="#⚙-api">API</a> |
+  <a href="#⚙-api-wip">API</a> |
   <a href="#🏡-running-locally">Running locally</a>
 </p>
 
