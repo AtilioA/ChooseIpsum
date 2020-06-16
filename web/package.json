@@ -16,7 +16,8 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.1",
     "react-toastify": "^6.0.5",
-    "styled-components": "^5.1.1"
+    "styled-components": "^5.1.1",
+    "react-app-rewired": "^2.1.6"
   },
   "scripts": {
     "start": "react-app-rewired start",
@@ -52,7 +53,7 @@
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^2.5.1",
     "gh-pages": "^3.0.0",
-    "prettier": "^2.0.5",
-    "react-app-rewired": "^2.1.6"
-  }
+    "prettier": "^2.0.5"
+  },
+  "proxy": "http://localhost:3333"
 }

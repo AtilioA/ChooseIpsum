@@ -1,5 +1,6 @@
 import express from 'express';
 import routes from './routes';
+const path = require('path');
 
 class App {
   constructor() {
@@ -14,6 +15,7 @@ class App {
 
   routes() {
     this.server.use(routes);
+    this.server.use(express.static(path.join(__dirname, 'web/build')));
   }
 }
 
