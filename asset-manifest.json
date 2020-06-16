@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.js": "/ChooseIpsum/static/js/main.c67bdd41.chunk.js",
-    "main.js.map": "/ChooseIpsum/static/js/main.c67bdd41.chunk.js.map",
-    "runtime-main.js": "/ChooseIpsum/static/js/runtime-main.f9ff5432.js",
-    "runtime-main.js.map": "/ChooseIpsum/static/js/runtime-main.f9ff5432.js.map",
-    "static/css/2.d34346ea.chunk.css": "/ChooseIpsum/static/css/2.d34346ea.chunk.css",
-    "static/js/2.e24cbfb8.chunk.js": "/ChooseIpsum/static/js/2.e24cbfb8.chunk.js",
-    "static/js/2.e24cbfb8.chunk.js.map": "/ChooseIpsum/static/js/2.e24cbfb8.chunk.js.map",
-    "index.html": "/ChooseIpsum/index.html",
-    "precache-manifest.c8bf8600383409c5a78cbb529691df62.js": "/ChooseIpsum/precache-manifest.c8bf8600383409c5a78cbb529691df62.js",
-    "service-worker.js": "/ChooseIpsum/service-worker.js",
-    "static/css/2.d34346ea.chunk.css.map": "/ChooseIpsum/static/css/2.d34346ea.chunk.css.map",
-    "static/js/2.e24cbfb8.chunk.js.LICENSE.txt": "/ChooseIpsum/static/js/2.e24cbfb8.chunk.js.LICENSE.txt"
+    "main.js": "/*atilioa.github.io/ChooseIpsum*/static/js/main.c67bdd41.chunk.js",
+    "main.js.map": "/*atilioa.github.io/ChooseIpsum*/static/js/main.c67bdd41.chunk.js.map",
+    "runtime-main.js": "/*atilioa.github.io/ChooseIpsum*/static/js/runtime-main.81b243b2.js",
+    "runtime-main.js.map": "/*atilioa.github.io/ChooseIpsum*/static/js/runtime-main.81b243b2.js.map",
+    "static/css/2.d34346ea.chunk.css": "/*atilioa.github.io/ChooseIpsum*/static/css/2.d34346ea.chunk.css",
+    "static/js/2.b4157542.chunk.js": "/*atilioa.github.io/ChooseIpsum*/static/js/2.b4157542.chunk.js",
+    "static/js/2.b4157542.chunk.js.map": "/*atilioa.github.io/ChooseIpsum*/static/js/2.b4157542.chunk.js.map",
+    "index.html": "/*atilioa.github.io/ChooseIpsum*/index.html",
+    "precache-manifest.d401217fd5bdbc322f98f519aed6cba3.js": "/*atilioa.github.io/ChooseIpsum*/precache-manifest.d401217fd5bdbc322f98f519aed6cba3.js",
+    "service-worker.js": "/*atilioa.github.io/ChooseIpsum*/service-worker.js",
+    "static/css/2.d34346ea.chunk.css.map": "/*atilioa.github.io/ChooseIpsum*/static/css/2.d34346ea.chunk.css.map",
+    "static/js/2.b4157542.chunk.js.LICENSE.txt": "/*atilioa.github.io/ChooseIpsum*/static/js/2.b4157542.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.f9ff5432.js",
+    "static/js/runtime-main.81b243b2.js",
     "static/css/2.d34346ea.chunk.css",
-    "static/js/2.e24cbfb8.chunk.js",
+    "static/js/2.b4157542.chunk.js",
     "static/js/main.c67bdd41.chunk.js"
   ]
 }
