@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c80ebe7cb3c5e40d97ccbffcd406e7e3",
+    "revision": "f4018bccc2d0e3967edb7f20adc2a25e",
     "url": "/*atilioa.github.io/ChooseIpsum*/index.html"
   },
   {

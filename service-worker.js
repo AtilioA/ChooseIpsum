@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/*atilioa.github.io/ChooseIpsum*/precache-manifest.d401217fd5bdbc322f98f519aed6cba3.js"
+  "/*atilioa.github.io/ChooseIpsum*/precache-manifest.b8d4c50d1bfd92eaf6cb696a30de8d78.js"
 );
 
 self.addEventListener('message', (event) => {
