@@ -309,7 +309,7 @@ export default class Main extends Component {
                 Irvine Welsh.
               </small>
               <span>
-                <a href="https://github.com/AtilioA/ChooseIpsum#-api">API</a>
+                <a href="https://github.com/AtilioA/ChooseIpsum#%E2%9A%99-api-wip">API</a>
               </span>
             </div>
           </Footer>
