@@ -20,8 +20,8 @@
 
 <p align="center">
   <a href="#ℹ-about">About</a> |
-  <a href="#⚙-api-wip">API</a> |
-  <a href="#🏡-running-locally">Running locally</a>
+  <a href="#-api">API</a> |
+  <a href="#-running-locally">Running locally</a>
 </p>
 
 # ℹ About
@@ -34,7 +34,7 @@ The application is composed by a RESTful API made with Express and a website run
 <img src=".github/Poster.png" width="50%">
 </div>
 
-# ⚙ API (WIP)
+# ⚙ API
 
 All API access is over HTTPS, and accessed from https://chooseipsum.herokuapp.com/api
 
