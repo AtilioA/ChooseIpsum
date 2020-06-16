@@ -14,7 +14,7 @@
 
 <h5 align="center">
 
-[![Heroku App Status](https://heroku-shields.herokuapp.com/chooseipsum)](https://inmetbot.herokuapp.com) [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-orange.svg)](https://www.gnu.org/licenses/gpl-3.0) ![GitHub code size in bytes](https://img.shields.io/github/repo-size/atilioa/chooseipsum)
+[![Heroku App Status](https://heroku-shields.herokuapp.com/chooseipsum)](https://inmetbot.herokuapp.com) [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-orange.svg)](https://www.gnu.org/licenses/gpl-3.0) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/atilioa/chooseipsum)
 
 </h5>
 

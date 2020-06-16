@@ -300,7 +300,7 @@ export default class Main extends Component {
           <Footer>
             <b>
               built by{' '}
-              <a href="https://www.github. com/AtilioA/ChooseIpsum">AtilioA</a>.
+              <a href="https://www.github.com/AtilioA/ChooseIpsum">AtilioA</a>.
             </b>
             <br />
             <div id="footer-last-line">
@@ -309,9 +309,7 @@ export default class Main extends Component {
                 Irvine Welsh.
               </small>
               <span>
-                <a href="https://www.github. com/AtilioA/ChooseIpsum/README.md#API">
-                  API
-                </a>
+                <a href="https://github.com/AtilioA/ChooseIpsum#-api">API</a>
               </span>
             </div>
           </Footer>
