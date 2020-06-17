@@ -14,7 +14,7 @@
 
 <h5 align="center">
 
-[![Heroku App Status](https://heroku-shields.herokuapp.com/chooseipsum)](https://inmetbot.herokuapp.com) [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-orange.svg)](https://www.gnu.org/licenses/gpl-3.0) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/atilioa/chooseipsum)
+[![Heroku App Status](https://heroku-shields.herokuapp.com/chooseipsum)](https://chooseipsum.herokuapp.com) [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-orange.svg)](https://www.gnu.org/licenses/gpl-3.0) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/atilioa/chooseipsum)
 
 </h5>
 
@@ -28,7 +28,7 @@
 
 This is a Lorem Ipsum generator made with ReactJS. It is inspired by [Trainspotting's Choose Life](https://www.youtube.com/watch?v=Fsk2IU9JQZ0) and was a constructive small project to learn React on my own.
 
-The application is composed by a RESTful API made with Express and a website running React.
+The application is composed by a REST API made with Express and a website running React.
 
 <div align="center">
 <img src=".github/Poster.png" width="50%">
