@@ -17,6 +17,7 @@ export const vanillaSentences = [
   'Choose being fitter, happier. ',
   'Choose your friends. ',
   'Choose entrepreneurship. ',
+  "Choose buying all the useless gadgets you didn't know you needed and that you won't ever use. ",
   'Choose disruption. ',
   'Choose key performance indicators. ',
   'Choose fads. ',
@@ -36,6 +37,7 @@ export const vanillaSentences = [
   'Choose microtransactions. ',
   'Choose mainstream. ',
   'Choose hype. ',
+  'Choose getting ahead. ',
   "Choose cheap ebooks that won't challenge you. ",
   'Choose YA and chicklit and bland massproduced airport thrillers with sanitized violence. ',
   'Choose being the victim of the Dunning-Kruger effect. ',
@@ -50,6 +52,13 @@ export const vanillaSentences = [
   'Choose Alexa, Google Home, Siri. ',
   'Choose hyper-productivity. ',
   'Choose self-help. ',
+  'Choose 9-5. ',
+  'Choose getting by. ',
+  'Choose looking ahead. ',
+  'Choose protesting with a hashtag. ',
+  'Choose unconstructive platitudes. ',
+  'Choose opt-out systems. ',
+  'Choose giving away your data for free. ',
 ];
 
 export const swearSentences = [
@@ -58,6 +67,8 @@ export const swearSentences = [
   'Choose the same fucking password for every fucking online service. ',
   'Choose not giving a f*ck. ',
   'Choose cameras watching every fucking second of your day. ',
+  'Choose getting useless notifications from dozens of services every day until your mind turns into fucking porridge. ',
+  "Choose following shitty advice you don't even think through for a second. ",
 ];
 
 export const politicalSentences = [
